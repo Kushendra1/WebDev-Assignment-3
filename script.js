@@ -6,7 +6,22 @@ let colorSelected;
 //Adds a Row
 function addR() {
   alert("clicked Add Row")
-}
+  const table = document.getElementById("grid");
+  const rows = document.createElement("tr");
+
+  if (numCols == 0) {
+    numCols = 1;
+  }
+
+  for (let i = 0; i < numCols; i++) {
+    let box = document.createElement("td");
+    rows.appendChild(box);
+  }
+
+  table.appendChild(rows);
+  numRows++;
+};
+
 //Adds a Col
 function addC() {
   alert("Clicked Add Col")

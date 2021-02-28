@@ -25,7 +25,21 @@ function addR() {
 //Adds a Col
 function addC() {
   alert("Clicked Add Col")
+  const table = document.getElementById("grid");
+  const cols = document.createElement("tr");
+
+  if (numRows == 0) {
+    numRows = 1;
+  }
+
+  for (let i = 0; i < numRows; i++) {
+    let box = document.createElement("td");
+    cols.appendChild(box);
+  }
+  table.appendChild(cols);
+  numCols++;
 }
+
 //Removes a Row
 function removeR() {
   alert("Clicked Remove Row")

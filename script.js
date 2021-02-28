@@ -34,3 +34,8 @@ function fill() {
 function fillU() {
   alert("Clicked Fill All Uncolored")
 }
+
+//clears all the colors from all rows and cols
+function clearAll() {
+  alert("Clicked Clear All")
+}

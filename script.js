@@ -6,7 +6,22 @@ let colorSelected;
 //Adds a Row
 function addR() {
   alert("clicked Add Row")
-}
+  const table = document.getElementById("grid");
+  const rows = document.createElement("tr");
+
+  if (numCols == 0) {
+    numCols = 1;
+  }
+
+  for (let i = 0; i < numCols; i++) {
+    let box = document.createElement("td");
+    rows.appendChild(box);
+  }
+
+  table.appendChild(rows);
+  numRows++;
+};
+
 //Adds a Col
 function addC() {
   alert("Clicked Add Col")
@@ -33,4 +48,9 @@ function fill() {
 //fills all uncolored row and col with selected color
 function fillU() {
   alert("Clicked Fill All Uncolored")
+}
+
+//clears all the colors from all rows and cols
+function clearAll() {
+  alert("Clicked Clear All")
 }

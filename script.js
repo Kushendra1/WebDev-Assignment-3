@@ -5,7 +5,7 @@ let colorSelected;
 
 //Adds a Row
 function addR() {
-  alert("clicked Add Row")
+  //alert("clicked Add Row")
   const table = document.getElementById("grid");
   const rows = document.createElement("tr");
 
@@ -24,7 +24,7 @@ function addR() {
 
 //Adds a Col
 function addC() {
-  alert("Clicked Add Col")
+  //alert("Clicked Add Col")
   const table = document.getElementById("grid");
   const cols = document.createElement("tr");
 

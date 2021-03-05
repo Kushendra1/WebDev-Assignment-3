@@ -20,30 +20,40 @@ function addR() {
 
   table.appendChild(rows);
   numRows++;
-};
+}
 
 //Adds a Col
 function addC() {
   //alert("Clicked Add Col")
   const table = document.getElementById("grid");
-  const cols = document.createElement("tr");
 
   if (numRows == 0) {
-    numRows = 1;
+    let box = document.createElement("tr");
+    table.appendChild(rows);
+    numRows++;
   }
 
-  for (let i = 0; i < numRows; i++) {
+  for (const row of grid.rows) {   //going through all the rows
     let box = document.createElement("td");
-    cols.appendChild(box);
+    row.appendChild(box);
   }
-  table.appendChild(cols);
   numCols++;
 }
 
 //Removes a Row
 function removeR() {
-  alert("Clicked Remove Row")
+  //alert("Clicked Remove Row")
+  if(numRows > 0) {
+    if(numRows == 1){
+        numCols = 0;
+    }
+    numRows--;
+    let table = document.getElementById("grid");
+    let rows = table.lastElementChild;
+    table.removeChild(row);
+  }
 }
+
 //Removes a Col
 function removeC() {
   alert("Clicked Remove Col")

@@ -20,23 +20,21 @@ function addR() {
 
   table.appendChild(rows);
   numRows++;
-};
+}
 
 //Adds a Col
 function addC() {
   //alert("Clicked Add Col")
   const table = document.getElementById("grid");
-  const cols = document.createElement("tr");
 
   if (numRows == 0) {
     numRows = 1;
   }
 
-  for (let i = 0; i < numRows; i++) {
+  for (const row of grid.rows) {
     let box = document.createElement("td");
-    cols.appendChild(box);
+    row.appendChild(box);
   }
-  table.appendChild(cols);
   numCols++;
 }
 

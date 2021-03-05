@@ -28,7 +28,7 @@ function addC() {
   const table = document.getElementById("grid");
 
   if (numRows == 0) {
-    let box = document.createElement("tr");
+    const rows = document.createElement("tr");
     table.appendChild(rows);
     numRows++;
   }

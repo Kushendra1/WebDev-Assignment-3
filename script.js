@@ -50,7 +50,7 @@ function removeR() {
     numRows--;
     let table = document.getElementById("grid");
     let rows = table.lastElementChild;
-    table.removeChild(row);
+    table.removeChild(rows);
   }
 }
 

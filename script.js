@@ -83,7 +83,7 @@ function fillU() {
   const table = document.getElementById("grid");
   for (const row of table.rows) {
     for (const col of row.cells) {
-      if (col.style.backgroundColor == "") {
+      if (col.style.backgroundColor == "" || col.style.backgroundColor == "white") {
         col.style.backgroundColor = colorSelected;
       }
     }

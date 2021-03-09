@@ -80,7 +80,14 @@ function fill() {
 
 //fills all uncolored row and col with selected color
 function fillU() {
-  alert("Clicked Fill All Uncolored");
+  const table = document.getElementById("grid");
+  for (const row of table.rows) {
+    for (const col of row.cells) {
+      if (col.style.backgroundColor == "") {
+        col.style.backgroundColor = colorSelected;
+      }
+    }
+  }
 }
 
 //clears all the colors from all rows and cols

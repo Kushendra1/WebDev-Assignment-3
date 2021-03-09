@@ -70,7 +70,12 @@ function selected() {
 
 //fills all row and col with selected color
 function fill() {
-  alert("Clicked Fll All");
+  const table = document.getElementById("grid");
+  for (const row of table.rows) {
+    for (const col of row.cells) {
+      col.style.backgroundColor = colorSelected;
+    }
+  }
 }
 
 //fills all uncolored row and col with selected color

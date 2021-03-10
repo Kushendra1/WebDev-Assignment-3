@@ -32,7 +32,7 @@ function addC() {
     //case for if the table is empty, we need to add a row to the table before adding a col since a row must be present before a col can be
     const rows = document.createElement("tr");
     table.appendChild(rows);
-    numRows++;
+    numRows = 1;
   }
 
   for (const row of grid.rows) {

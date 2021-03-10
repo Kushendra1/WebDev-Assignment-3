@@ -60,12 +60,21 @@ function removeR() {
 
 //Removes a Col
 function removeC() {
-  alert("Clicked Remove Col");
+    //makes sure that table isn't empty and then deleting the cols since cols are dependent on rows
+    if (numCols > 0) {
+        numCols--;
+        let table = document.getElementById("grid");//storing element grid in an easy to call variable
+        for (let i = 0; i < numRows; i++) {
+            let rows = table.rows[i];
+            rows.deleteCell(rows.cells.length -1);
+        }
+    }
 }
+
 //Sets global var for selected color
 function selected() {
-  colorSelected = document.getElementById("selectedID").value;
-  console.log(colorSelected);
+    colorSelected = document.getElementById("selectedID").value;
+// console.log(colorSelected);
 }
 
 //fills all row and col with selected color

@@ -61,13 +61,18 @@ function removeR() {
 //Removes a Col
 function removeC() {
     //makes sure that table isn't empty and then deleting the cols since cols are dependent on rows
+    let table = document.getElementById("grid");//storing element grid in an easy to call variable
     if (numCols > 0) {
         numCols--;
-        let table = document.getElementById("grid");//storing element grid in an easy to call variable
+        
         for (let i = 0; i < numRows; i++) {
             let rows = table.rows[i];
             rows.deleteCell(rows.cells.length -1);
         }
+    }
+    if (numCols == 0) {
+      numRows = 0;
+      table.innerHTML = "";
     }
 }
 

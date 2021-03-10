@@ -32,7 +32,7 @@ function addC() {
     //case for if the table is empty, we need to add a row to the table before adding a col since a row must be present before a col can be
     const rows = document.createElement("tr");
     table.appendChild(rows);
-    numRows = 1;
+    numRows++;
   }
 
   for (const row of grid.rows) {
@@ -45,14 +45,14 @@ function addC() {
 
 //Removes a Row
 function removeR() {
-  //alert("Clicked Remove Row")
+  let table = document.getElementById("grid"); //storing element grid in an easy to call variable
   if (numRows > 0) {
     //makes sure that table isn't empty and then deleting the cols since cols are dependent on rows
     if (numRows == 1) {
       numCols = 0;
     }
     numRows--;
-    let table = document.getElementById("grid"); //storing element grid in an easy to call variable
+    
     let rows = table.lastElementChild; //gets the last row in the table and then removes it
     table.removeChild(rows);
   }
@@ -70,6 +70,7 @@ function removeC() {
             rows.deleteCell(rows.cells.length -1);
         }
     }
+    //if col is 0, reset the table and rows
     if (numCols == 0) {
       numRows = 0;
       table.innerHTML = "";
@@ -84,21 +85,21 @@ function selected() {
 
 //fills all row and col with selected color
 function fill() {
-  const table = document.getElementById("grid");
-  for (const row of table.rows) {
-    for (const col of row.cells) {
-      col.style.backgroundColor = colorSelected;
+  const table = document.getElementById("grid");//get grid
+  for (const row of table.rows) {// for each row
+    for (const col of row.cells) {// for each cell
+      col.style.backgroundColor = colorSelected; // change color of cell
     }
   }
 }
 
 //fills all uncolored row and col with selected color
 function fillU() {
-  const table = document.getElementById("grid");
-  for (const row of table.rows) {
-    for (const col of row.cells) {
-      if (col.style.backgroundColor == "" || col.style.backgroundColor == "white") {
-        col.style.backgroundColor = colorSelected;
+  const table = document.getElementById("grid");//get grid
+  for (const row of table.rows) {//for each row
+    for (const col of row.cells) {//for each cell
+      if (col.style.backgroundColor == "" || col.style.backgroundColor == "white") {//if uncolored
+        col.style.backgroundColor = colorSelected;//change color of cell
       }
     }
   }
@@ -106,10 +107,10 @@ function fillU() {
 
 //clears all the colors from all rows and cols
 function clearAll() {
-  const table = document.getElementById("grid");
-  for (const row of table.rows) {
-    for (const col of row.cells) {
-      col.style.backgroundColor = "";
+  const table = document.getElementById("grid");//get grid
+  for (const row of table.rows) {//for each row
+    for (const col of row.cells) {//for each cell
+      col.style.backgroundColor = "";//clear color
     }
   }
 }

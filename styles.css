@@ -4,6 +4,7 @@
 }
 body{
   font-family: 'Rubik', sans-serif;
+  background-color: #cfbfde;
 }
 .button-wrapper{
   text-align: center;
@@ -23,6 +24,14 @@ button{
   font-size: 15px;
   border: none;
   padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+button:hover{
+  background-color: white;
+  color: DodgerBlue;
+  border: 2px solid;
+  border-color: DodgerBlue;
 }
 select{
   padding: 10px 20px;

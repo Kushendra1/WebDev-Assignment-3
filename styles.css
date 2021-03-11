@@ -30,9 +30,14 @@ select{
   background-color: white;
   color: DodgerBlue;
 }
+table{
+  padding-top: 35px;
+}
 tr,td{
     border:1px;
     border-style: solid;
+    border-radius: 10px;
+    border-color: orange;
 }
 td{
     height: 50px;

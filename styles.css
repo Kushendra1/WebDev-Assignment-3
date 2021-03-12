@@ -27,6 +27,8 @@ button{
   border-radius: 25px;
   transition: 0.5s;
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .clear{
   background-color: red;

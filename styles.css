@@ -26,6 +26,17 @@ button{
   padding: 10px 20px;
   border-radius: 25px;
   transition: 0.5s;
+  cursor: pointer;
+}
+.clear{
+  background-color: red;
+  color: white;
+}
+.clear:hover{
+  background-color: white;
+  color: red;
+  border: 2px solid;
+  border-color: red;
 }
 button:hover{
   background-color: white;
